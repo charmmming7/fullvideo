@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>아노스</title>
+    <link rel="stylesheet" href="resources/css/normalize.css">
+    <link rel="stylesheet" href="resources/css/slick.css">
+    <link rel="stylesheet" href="resources/css/fullpage.css">
+    <link rel="stylesheet" href="resources/css/common.css">
+    <link rel="stylesheet" href="resources/css/bella.css">
+    <script src="resources/js/jquery-1.12.1.min.js"></script>
+    <script src="resources/js/modernizr-custom.js"></script>
+    <script src="resources/js/slick.min.js"></script>
+    <script src="resources/js/fullpage.min.js"></script>
+    <script src="resources/js/instafeed.min.js"></script>
+    <script src="resources/js/common.js"></script>
+    
+    
+</head>
+
+<body>
+    <header>
+            <ul id="gnb">
+               <li><a href="index.html">ANOS</a></li>
+               <li class="on"><a href="story.html">BELLA</a>
+                   <ul class="sub-menu">
+                       <li class="on"><a href="story.html">story</a></li>
+                       <li><a href="series-red.html">series</a>
+                           <ul class="depth2-sub-menu">
+                               <li><a href="series-red.html">X RED</a></li>
+                               <li><a href="#">X BLUE</a></li>
+                               <li><a href="#">X BLACK</a></li>
+                               <li><a href="#">X WHITE</a></li>
+                           </ul>
+                       </li>
+                   </ul>
+               </li>
+               <li><a href="#">VANISH</a></li>
+               <li><a href="#">SHOP</a></li>
+            </ul>
+    </header>
+    
+    <div class="wrapper" id="story">
+        <div id="fullpage">
+            
+            <div class="section section1">
+                <div class="_container _clearfix">
+                   
+                    <div class="right-box">
+                        <div class="title"><img src="resources/images/bella/tit_bella_story1.png" alt="벨라 하이드로겔 마스크"></div>
+                        
+                        <div class="_dist">
+                            <p>
+                                <span>고농축 에센스를 응축한 골드 겔 타입의 수용성 마스크팩!</span>
+                                <span>끈적임이 없어 바디케어까지 한번에 해결 가능한 촉촉한 에센스!</span>
+                                <span>흐르지 않는 에센스의 깔끔함</span>
+                                <span>사용 후 80°c 이상, 200ml 이상의 물에 약 4분정도 녹여</span>
+                                <span>바디에센스로 재사용 가능</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- //_container-->
+                
+            </div>
+            <!-- //section1 -->
+            
+            <div class="section section2" >
+                <div class="_container">
+                    <div class="left-box">
+                        <div class="title"><img src="resources/images/bella/tit_bella_story2.png" alt="벨라 하이드로겔 마스크"></div>
+                        
+                        <div class="_dist">
+                            <p>
+                                <span>상하 분리형 마스크</span>
+                                <span>노매쉬 하이드로겔 마스크</span>
+                                <span>물에 녹는 수용성 겔 마스크</span>
+                                <span>골드펄의 고급스러운 겔 마스크</span>
+                                <span>탁월한 밀착력</span>
+                                <span>자체 쿨링 효과</span>
+                                <span>겔 자체 고농축 에센스 함유</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- //section2-->
+            
+            <div class="section section3">
+                <div class="_container">
+                    <div class="center-box _clearfix box">
+                        <div class="img-wrap"><img src="resources/images/bella/bella_story_3_1.png" alt="X RED, X BLUE"></div>
+                        <div class="img-wrap"><img src="resources/images/bella/bella_story_3_2.png" alt="X WHITE, X BLACK"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- //section3 -->
+                
+        </div>
+        <!-- //fullpage -->
+        
+        <!--footer-->
+        <footer>
+            <div class="_container _clearfix">
+                <p class="foot-logo"><span class="img-wrap"><img src="resources/images/common/foot_logo.png" alt="아노스" class="full-img"></span></p>
+                <div class="foot-txt">
+                    <ul>
+                        <li>주소 : 인천광역시 남구 경인로 485번길 33, 2층(주안동) </li>
+                        <li>대표자 : 아노스 | 사업자등록번호 : 801-17-00304 | 통신판매업신고  : 제2016-인천남구-0733호</li>
+                        <li>대표전화 : 032.422.9705 | 개인정보책임자 : 아노스 (anos2016@naver.com)</li>
+                    </ul>
+                </div>
+                <div class="foot-sns">
+                    <a href="https://www.instagram.com/anos_cos" class="sns-ins">인스타그램</a>
+                    <a href="https://www.facebook.com/anos.cosmetic" class="sns-fb">페이스북</a>
+                    <a href="http://storefarm.naver.com/anos" class="sns-sp">쇼핑몰</a>
+                </div>
+            </div>
+        </footer>
+        <!--footer-->
+        
+    </div>
+    <!-- //wapper-->
+    
+    
+    <!-- PRELOAD -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner"></div>
+            <span class="text">LOADING</span>
+        </div>
+    </div>
+    <!-- // PRELOAD -->    
+    
+    
+    <script>
+    $(function(){       
+        
+        $('.sub-menu').show();
+        $('.depth2-sub-menu').hide();
+        
+        
+       $(".section3 .box .img-wrap").eq(0).mousemove(function(e){
+            var parentOffset = $(this).parent().offset();
+            var X = (e.pageX - parentOffset.left); //offset -> method allows you to retrieve the current position of an element 'relative' to the document
+            var Y = (e.pageY - parentOffset.top);
+            console.log(X,Y);
+           
+           if( X >=0 && X < 263  && Y >=0 && Y <626){
+               $(this).find('img').attr('src','resources/images/bella/bella_xRed.jpg');
+           }else if(X >=263 && X < 525  && Y >=0 && Y <626){
+                $(this).find('img').attr('src','resources/images/bella/bella_xBlue.jpg');
+            }
+           
+        }).mouseout(function(){
+           $(this).find('img').attr('src','resources/images/bella/bella_story_3_1.png');           
+        });
+        
+         $(".section3 .box .img-wrap").eq(1).mousemove(function(e){
+            var parentOffset = $(this).parent().offset();
+            var X = (e.pageX - parentOffset.left); //offset -> method allows you to retrieve the current position of an element 'relative' to the document
+            var Y = (e.pageY - parentOffset.top);
+            console.log(X,Y);
+           
+           if( X >=535 && X < 798  && Y >=0 && Y <626){
+               $(this).find('img').attr('src','resources/images/bella/bella_xBlack.jpg');
+           }else if(X >=798 && X < 1060  && Y >=0 && Y <626){
+                $(this).find('img').attr('src','resources/images/bella/bella_xWhite.jpg');
+            }
+           
+        }).mouseout(function(){
+           $(this).find('img').attr('src','resources/images/bella/bella_story_3_2.png');           
+        });
+
+    })
+    </script>
+</body>
+
+</html>
+
+

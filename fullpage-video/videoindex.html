@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>풀페이지</title>
+    <link rel="stylesheet" href="resources/css/normalize.css">
+    <link rel="stylesheet" href="resources/css/slick.css">
+    <link rel="stylesheet" href="resources/css/fullpage.css">
+    <script src="resources/js/jquery-1.12.1.min.js"></script>
+    <script src="resources/js/modernizr-custom.js"></script>
+    <script src="resources/js/slick.min.js"></script>
+    <script src="resources/js/fullpage.min.js"></script>
+    <style>
+        #menu {position: fixed; z-index: 50;}
+        #menu li{display: inline-block; margin-right: 50px; font-size: 1.2em; padding: 1em; }
+        #menu li a{color:#000;}
+        #menu li.active a, #menu li:hover a{ text-decoration: underline; color: deeppink}
+        
+        .video-wrap{ position: relative; overflow: hidden; width: 60%; margin: auto;}
+        #myVideo{ top:0; left: 0; right: 0; bottom: 0; width:100%; height: 100%; object-fit: cover;}
+        button{ z-index: 50; color: #fff; position: absolute; top: 50%; }
+        #nextButton{right: 30px;}
+        #prevButton{left: 30px; }
+        
+        .text-wrap{position: absolute; }
+    </style>
+</head>
+
+<body>
+    <!--
+    각 메뉴 = 각 섹
+    -->
+    <ul id="menu">
+        <li data-menuanchor="ANOS" class="active"><a href="#ANOS">ANOS</a></li>
+        <li data-menuanchor="BELLA"><a href="#BELLA">BELLA</a></li>
+        <li data-menuanchor="VANISH"><a href="#VANISH">VANISH</a></li>
+        <li data-menuanchor="SHOP"><a href="#SHOP">SHOP</a></li>
+    </ul>
+    <div id="wrapper">
+        <div id="fullpage">
+            
+            <div class="section section1">
+                <div class="video-wrap">
+                    <video id="myVideo" controls autoplay data-autoplay onended="runNext()" autobuffer="true">
+                        <source src="resources/images/video1.mp4" type="video/mp4">
+                        <source src="resources/images/video2.mp4" type="video/mp4">
+                        <source src="resources/images/video3.mp4" type="video/mp4">
+                        
+                    </video>
+                    <button id="nextButton"> <img src="resources/images/btn_right.png" alt=""></button>
+                    <button id="prevButton"> <img src="resources/images/btn_left.png" alt=""></button>
+                </div>
+                
+                <div class="text-wrap">
+                    <div class="rect"></div>
+                    <h2>ANOS</h2>
+                    <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="cont"> Laborum adipisci nam, vitae dolores pariatur laboriosam, harum voluptatum? Numquam reiciendis corrupti assumenda nisi. Eligendi nesciunt, beatae hic nemo odio, sint ea.</p>
+                </div>
+            </div>
+            
+            <div class="section section2">BELLA</div>
+            <div class="section section3">VANISH</div>
+            <div class="section section4">
+                <!--landscape slider-->
+                SHOP
+                <div class="slide slide1" data-anchor="slide1"> Slide 1 </div>
+                <div class="slide slide2" data-anchor="slide2"> Slide 2 </div>
+                <div class="slide slide3" data-anchor="slide3"> Slide 3 </div>
+                <div class="slide slide4" data-anchor="slide4"> Slide 4 </div>
+            </div>
+            <div class="section footer fp-auto-height">
+                <h2>Auto height footer</h2>
+            </div>
+        </div>
+        <!-- //fullpage -->
+    </div>
+    
+    <!-- PRELOAD -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner"></div>
+            <span class="text">LOADING</span>
+        </div>
+    </div>
+    <!-- // PRELOAD -->    
+    
+    
+    <script>
+        var video_count =1;
+        
+        videoPlayer = document.getElementById("myVideo");
+        var total = videoPlayer.childElementCount; 
+        
+        $('#nextButton').on('click', function(){
+            runNext();
+        })
+        
+        $('#prevButton').on('click', function(){
+            runPrev();
+        })
+     
+
+        function runNext (){
+            video_count++;
+            
+              if (video_count == total+1) video_count = 1;
+              var nextVideo = "resources/images/video"+video_count+".mp4";
+              videoPlayer.src = nextVideo;
+              videoPlayer.play();
+        }
+        
+         function runPrev (){
+            video_count--;
+            
+              if (video_count == 1) video_count = total+1;
+              var nextVideo = "resources/images/video"+video_count+".mp4";
+              videoPlayer.src = nextVideo;
+              videoPlayer.play();
+        }
+        
+        
+        
+        
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                //Navigation
+                menu: '#menu',
+                anchors: ['ANOS', 'BELLA', 'VANISH', 'SHOP'],
+                navigation: true,
+                navigationTooltips: ['ANOS', 'BELLA', 'VANISH', 'SHOP'],
+                showActiveTooltip: true,
+                navigationPosition: 'right',
+                showActiveTooltip: true,
+                
+                //Scrolling 
+                css3: true,
+                easingcss3: 'cubic-bezier(0.885, 0.010, 0.430, 0.905)',
+                
+                
+                //Accessibility
+		        keyboardScrolling: true,
+                //fixedElements: '#header, .footer',
+                
+                afterLoad: function(anchorLink, index){ 
+                    var loadedSection = $(this);
+                    
+                    if(anchorLink == 'ANOS'){
+                        $('.text-wrap').animate('top','200');
+                    }
+                    
+                },
+                afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+                    alert('슬라이드를 이동했습니다.')  
+                }
+
+            });
+            
+            
+            
+            $(window).load(function(){
+                setTimeout(function(){
+                    $(".section1").addClass("loaded");    
+                }, 500);
+                
+               $('#status').fadeOut();
+               $('#preloader').delay(350).fadeOut('slow');
+               $('body').delay(350).css({'overflow':'visible'});
+
+            });
+            
+            
+        });
+
+    </script>
+</body>
+
+</html>
+
+

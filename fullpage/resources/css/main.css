@@ -1,0 +1,72 @@
+/*
+**
+**    section1
+**
+*/
+.section1{ position: relative; padding: 0; background: url('../images/main/bg_main1.png') center center no-repeat; -webkit-background-size: cover; background-size: cover;}
+.section1 .title{ margin-top: -144px;}
+
+.section1 ._more{ position: absolute; bottom:0; width: 100%; -webkit-transition: all .6s;-o-transition: all .6s; transition: all .6s; padding:2em; background-color: rgba(0,0,0,0.2); padding: 2em 0; opacity: 0; margin: auto; font-weight: 600; line-height: 1.4em; font-size: 1em;}
+.section1 ._more.loaded{opacity: 1; bottom:81px;}
+.section1 .btn_wrap{float: right;}
+
+
+
+
+/*
+**
+**    section2  bella
+**
+*/
+.section2{ background: url('../images/main/bg_main2.png') center center no-repeat; -webkit-background-size: cover; background-size: cover;}
+.center-box{ position: relative; padding-bottom: 50px;}
+.center-box .title:after{ position: absolute; bottom: 0; left: 50%; width: 1px; height: 30px; background-color: #000; content: '';}
+
+
+
+/*
+**
+**    section3  vanish
+**
+*/
+.section3{ background: url('../images/main/bg_main3.png') center center no-repeat; -webkit-background-size: cover; background-size: cover;}
+
+
+/*
+**
+**    section4  instagram
+**
+*/
+.section4 h1{ margin: 0; }
+
+
+
+/* INSTAGRAM custom */
+.col-md-4{width:23%; float: left; padding-right: 2%; padding-bottom: 1.5%;}
+.icon-wrap > * {display: inline-block;}
+.icon-wrap > span{font-size: 18px;}
+.icon-wrap > span.likes{margin-right:25px !important;}
+.icon{width:20px; height:20px; margin-bottom: -3px; margin-right: 2px;}
+
+
+/* the good stuff */
+.img-featured-container { overflow: hidden; position: relative;}
+img.img-responsive { width: 100%; }
+.img-featured-container .img-backdrop {
+  background: rgba(0,0,0,0.25); margin: 0; padding: 0; width: 100%; height: 276px; position: absolute; z-index: 1; opacity: 0;  transition: all 0.3s ease;}
+.img-featured-container:hover>.img-backdrop { opacity: 1;}
+
+
+/* center text horizontally and vertically on image hover */
+.img-featured-container .description-container { color: #fff; text-align: center; line-height: 20px; width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; opacity: 0; transition: all .2s ease;}
+.img-featured-container .description-container .fa-instagram { font-size: 40px;}
+.img-featured-container .description-container p { font-weight: 300; margin-bottom: 0;}
+.img-featured-container:hover .description-container { opacity: 1;}
+.img-featured-container .description-container .likes,
+.img-featured-container .description-container .comments { margin: 0 5px;}
+
+
+/* load more button */
+#btn-instafeed-load { color: #fff; background: #26a3ff; margin: 20px auto; padding: 8px 12px; display: block; border: none;}
+
+

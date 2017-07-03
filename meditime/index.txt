@@ -1,0 +1,138 @@
+index.html
+
+
+
+
+
+
+
+
+<!--@layout(/layout/basic/main.html)-->
+
+
+  
+<!-- 추천상품 -->
+<div module="product_listmain_1">
+    <!--@css(/css/module/product/listmain_1.css)-->
+    <!--
+        $count = 4
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <ul class="prdList column4">
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="" class="thumb" /></a>
+                
+                <div class="productInfo">
+                    <p class="name">
+                        <a href="/product/detail.html{$param}" class="{$product_name_display|display}"><strong class="title {$product_name_title_display|display}">{$product_name_title} :</strong> {$product_name}</a>
+                    </p>
+                    <ul module="product_ListItem">
+                        <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                        <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </li>
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="" class="thumb" /></a>
+                
+                <div class="productInfo">
+                    <p class="name">
+                        <a href="/product/detail.html{$param}" class="{$product_name_display|display}"><strong class="title {$product_name_title_display|display}">{$product_name_title} :</strong> {$product_name}</a>
+                    </p>
+                    <ul module="product_ListItem">
+                        <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                        <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </li>
+    </ul>
+</div><!-- //추천상품 -->
+
+
+<div class="mainTitle">
+    <a href="#"><img src="/web/upload/category/editor/2015/04/12/f91c889f8eefc0a052cb4f645183e3f0.gif" alt="중간바" /></a>
+</div>
+
+
+
+배너
+<div class="visual secondvisual">
+   <div class="secondArea firstBanner">
+       <a href="#"><img src="/web/upload/category/editor/2015/05/01/1069db3fcbae60ce271692fed5e46342.jpg" alt="좌배너" /></a>
+   </div>
+    <div class="secondArea secondBanner">
+       <a href="#"><img src="/web/upload/category/editor/2015/04/12/858494b3ac94b9327f074143e82d8fad.jpg" alt="룩북배너" /></a>
+       <div class="slidebanner">
+           <div module="Layout_project">
+                <!--@css(/css/module/layout/project.css)-->
+                <!--@js(/js/rotate.js)-->
+                <!--@js(/js/module/layout/project.js)-->
+                <ul>
+                    <li><a href="/product/project.html{$param}"><img src="{$category_image}" alt="기획전배너1" /></a></li>
+                    <li><a href="/product/project.html{$param}"><img src="{$category_image}" alt="기획전배너2" /></a></li>
+                </ul>
+            </div>
+       </div>
+   </div>
+    <div class="secondArea thirdBanner">
+       <a href="#"><img src="/web/upload/category/editor/2015/04/12/4a7be57d38af80704c124f6b47c06fd7.jpg" alt="우배너" /></a>
+   </div>
+</div>
+
+
+
+<!-- 신상품 -->
+<div module="product_listmain_2">
+    <!--@css(/css/module/product/listmain_2.css)-->
+    <!--
+        $count = 4
+    -->
+    <ul class="prdList column4">
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="" class="thumb" /></a>
+                
+                <div class="productInfo">
+                    <p class="name">
+                        <a href="/product/detail.html{$param}" class="{$product_name_display|display}"><strong class="title {$product_name_title_display|display}">{$product_name_title} :</strong> {$product_name}</a>
+                    </p>
+                    <ul module="product_ListItem">
+                        <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                        <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </li>
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="" class="thumb" /></a>
+                
+                <div class="productInfo">
+                    <p class="name">
+                        <a href="/product/detail.html{$param}" class="{$product_name_display|display}"><strong class="title {$product_name_title_display|display}">{$product_name_title} :</strong> {$product_name}</a>
+                    </p>
+                    <ul module="product_ListItem">
+                        <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                        <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </li>
+    </ul>
+</div> <!--//신상품-->
+
+
+<!--@define(cmc_log)-->
+
+
+
+

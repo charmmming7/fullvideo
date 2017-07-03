@@ -1,0 +1,48 @@
+.sub-content {padding-bottom:80px;}
+img {max-width:100%;}
+.txt-cheerleader {font-family:"CheerLeader",sans-serif;}
+.txt-orange{color:#ff6600;}
+.role-tbl {display:table;table-layout: fixed;width:100%;}
+.img-wrap img {display:block;}
+.section {margin-top:90px;}
+.c-orange {color:#ff5000;}
+
+
+/*
+**
+**      B a n n e r
+**
+*/
+.banner {height:395px;width:100%;position:relative;overflow: hidden;text-align:center;}
+.banner h2 {position:absolute;top:50%;width:100%;color:#fff;font-size:60px;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);letter-spacing: 0}
+.banner#brand {background:url('../images/sub_banner/banner_brand.jpg') center bottom no-repeat;}
+.banner#menu {background:url('../images/sub_banner/banner_menu.jpg') center bottom no-repeat;}
+
+
+/*
+**
+**      S u b m e n u
+**
+*/
+.category-list {padding:30px 0 60px 0;text-align:center;}
+.category-list li {display:inline-block;vertical-align: middle;position:relative;margin-right:40px;margin-bottom:10px;}
+.category-list li:last-child {margin-right:0;}
+.category-list li:after {content:'';display:block;position:absolute;top:5px;bottom:8px;right:-23px;width:1px;background:#000;}
+.category-list li:last-child:after {content:none;}
+.category-list li a {font-size:25px;color:#000;}
+.category-list li.on a,
+.category-list li:hover a {color:#ff6600;text-decoration: underline;}
+
+
+
+
+
+/*
+**
+**      Media queries
+**
+*/
+@media (max-width:1200px){
+    .category-list li a {font-size:20px;}
+
+}

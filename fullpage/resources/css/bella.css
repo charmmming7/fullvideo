@@ -1,0 +1,77 @@
+/*
+**    story
+**    section1
+**
+*/
+#story .section1{ position: relative; padding: 0; background: url('../images/bella/bella_story_1.png') left center no-repeat;}
+#story .section1 .title{ margin-top: -144px;}
+#story .center-box .title:after{ position: absolute; bottom: 0; left: 50%; width: 30px; height: 1px; background-color: #000; content: '';}
+
+
+
+
+/*
+**    story
+**    section2  
+**
+*/
+#story .section2{ background: url('../images/bella/bella_story_2.jpg') right center no-repeat; }
+
+
+
+/*
+**    story
+**    section3  series
+**
+*/
+#story .section3{ background: #fff; }
+#story .section3 .center-box{ padding: 0 71px;}
+#story .section3 .img-wrap{ float: left; width: 524px; overflow: hidden;}
+#story .section3 .img-wrap:first-child{ margin-right: 10px;}
+
+
+
+/*
+**
+**    series red
+**    section1
+*/
+#red .section1 {position: relative;}
+#red .section1 .center-box {padding-top: 115px}
+#red .section1 .center-box > div {padding-left: 300px}
+#red .section1 .left-box{ background: url('../images/bella/bella_red_1.png') center center no-repeat;}
+#red .section1 .fp-tableCell > div{float: left; width: 50%; }
+#red .section1 .sub-title{ position: relative; display: inline-block; border: 1px solid #000; font-size: 1em; padding: .5em; margin-top: 1em; margin-bottom: 4em; }
+#red .section1 .sub-title:after{ position: absolute; bottom: -47px; left: 50%; display: block; content: ''; width: 1px; height: 25px; background-color: #000; }
+#red .section1 .layer{position: absolute; content: ''; top:0; left: 50%; right: 0; bottom: 0; width: 100%; height: 100%; background: #e5e5e7; z-index: -1;}
+
+ 
+/*
+**
+**    series red
+**    section2
+*/
+#red .section2 .content-box > div{  float: left;}
+#red .section2 .left-box {height: 451px; padding: 5em 5em 1em 5em; border: 1px solid #000; border-left: 0; }
+#red .section2 #sub-tab{ width: 90%; margin: auto; margin-bottom: 2em;}
+#red .section2 #sub-tab li{ width:17%; height: 167px; float: left; margin-right: 3%; border: 1px solid #000;}
+#red .section2 #sub-tab li:last-child{ margin-right: 0;}
+#red .section2 #sub-tab li img{ width:100%; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
